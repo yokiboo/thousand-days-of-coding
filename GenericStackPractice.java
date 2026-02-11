@@ -5,11 +5,45 @@ import java.util.EmptyStackException;
 public class GenericStackPractice {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		System.out.println(isBalanced("([]){}"));
+		System.out.println(isBalanced("([{"));
 
 	}
 	
-	public class GenericStack<T> {
+	
+	public static boolean isBalanced(String brackets) {
+		
+		char[] charArray = brackets.toCharArray();
+		
+		GenericStack<Character> stack = new GenericStack<>();
+		
+		for(Character c: charArray) {
+			
+			if(c == '(' || c == '{' || c == '[') {
+				stack.push(c);
+			} else if((c == ')' || c == '}' || c == ']') && !stack.isEmpty()) {
+				Character pop = stack.pop();
+				if (pop == '(' && c == ')') {
+					continue;
+				} else if (pop == '[' && c == ']') {
+					continue;
+				} else if (pop == '{' && c == '}') {
+					continue;
+				}
+				
+			}
+			
+		}
+		
+		if(stack.isEmpty()) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public static class GenericStack<T> {
 		
 		private class Node<T>{
 			
