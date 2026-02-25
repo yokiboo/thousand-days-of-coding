@@ -6,10 +6,11 @@ public class Employee {
 		
 	}
 	
-	public Employee(String name, int age, String department) {
+	public Employee(String name, int age, String department, String gender) {
 		this.name = name;
 		this.age = age;
 		this.department = department;
+		this.gender = gender;
 	}
 	
 	private String name;
@@ -17,6 +18,8 @@ public class Employee {
 	private int age;
 	
 	private String department;
+	
+	private String gender;
 
 	public String getName() {
 		return name;
@@ -41,7 +44,13 @@ public class Employee {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	
-	
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
 }
