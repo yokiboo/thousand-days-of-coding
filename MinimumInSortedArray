@@ -1,0 +1,29 @@
+
+public class MinimumSortedArray {
+    
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+    
+    public int binarySearch(int[] arr){
+        int left = 0;
+        int right = arr.length-1;
+        
+        if(arr[left] < arr[right]){
+            return arr[left];
+        }
+        
+        mid = left + (right-left)/2;
+        
+        while(left < right){
+            
+            if(arr[left] < arr[mid]){
+                right = mid;
+            } else {
+                left = mid
+            }
+        }
+        
+        return arr[left];
+    }
+}
