@@ -1,0 +1,31 @@
+
+public class SearchInRotatedArrayRedo {
+    
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+    
+    public int searchIn(int[] arr, int i){
+        if(i == null || arr.length == 0){
+            return -1;
+        }
+        
+        int left = 0;
+        int right = arr.length-1;
+        
+        while(left < right){
+            int mid = left + (right - left)/2;
+            
+            if(arr[mid] = i){
+                return mid;
+            }
+            
+            if(arr[left] > arr[mid]){
+                if(i < arr[mid] && arr[mid] <= arr[left]){
+                    
+                }
+            }
+        }
+        
+    }
+}
