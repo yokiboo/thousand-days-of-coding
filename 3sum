@@ -27,3 +27,19 @@ Example Walkthrough with nums = [-1,0,1,2,-1,-4]
    · left = 4, right = 5
    · 1 + 2 = 3 > 0 → right-- (done)
 6. Result: [[-1,-1,2], [-1,0,1]]
+
+Time & Space Complexity
+
+· Time Complexity: O(n²)
+  · Sorting: O(n log n)
+  · Nested loops: O(n²)
+· Space Complexity: O(1) or O(n) depending on sorting implementation
+  · Not counting the space for output
+  · Sorting may require O(n) space depending on implementation
+
+Key Points to Remember
+
+1. Sorting is crucial - enables two-pointer technique and duplicate handling
+2. Skip duplicates at all three positions to avoid duplicate triplets
+3. Optimization: If the smallest element > 0, we can break early
+4. Two-pointer approach is more efficient than nested loops (O(n²) vs O(n³))
