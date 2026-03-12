@@ -43,3 +43,11 @@ Key Points to Remember
 2. Skip duplicates at all three positions to avoid duplicate triplets
 3. Optimization: If the smallest element > 0, we can break early
 4. Two-pointer approach is more efficient than nested loops (O(n²) vs O(n³))
+
+Key Optimizations Explained
+
+1. Early Termination: If the smallest element > 0, no triplet can sum to zero
+2. Skip Duplicates: Prevents processing same combinations multiple times
+3. Range Checks: Skip impossible combinations using min/max sum checks
+4. Binary Search Alternative: For very large arrays, can use binary search for the third element
+5. Frequency Map: For arrays with many duplicates, count frequencies to skip processing
